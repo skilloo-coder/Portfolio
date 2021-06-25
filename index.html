@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>portfolio</title>
+    
+    <!--------g-fonts-------->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    
+    <style>
+      *{
+        margin: 0; padding:0; 
+        box-sizing: border-box;
+      }
+      
+     @font-face{
+      font-family:china;
+      src:url(go3v2.ttf);
+      }
+      
+     @font-face{
+     font-family:japan;
+     src:url(JAPANESE_2020.ttf);
+     }
+      
+    html{
+      scroll-behavior: smooth;
+    }
+      
+      .main-header{
+        color:white;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1.8rem 10rem;
+        background-image: url(header-background.jpg);
+        background-size: cover;
+      }
+      
+      .main-header-div-1{
+        background: transparent;
+        position: relative;
+        grid-row: 1/2;
+      }
+    /*  
+      .main-header-div-1:hover .main-header-div-3-side-div{
+        transform: translateX(20rem);
+      }
+      */
+      
+      
+      
+      
+    
+      .main-header-div-1 li{
+        padding: .3rem 2.3rem;
+        list-style: none;
+        background: transparent;
+        position: absolute;
+        width:20%;
+        top:.07rem;
+      }
+      
+      .main-header-div-1 li a{
+        color:white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:china;
+        cursor: pointer;
+      }
+  
+  /*    .main-header-div-1 li :hover >  .profile{
+        
+      }*/
+    
+      .main-header-div-1 .profile{
+        font-size: 1.1rem;
+        background:transparent;
+        color:transparent;
+        cursor: pointer;
+      }
+      /*
+    .main-header-div-1 .profile:hover{
+      display: none;
+      color: transparent;
+      background: transparent;
+    }
+    */
+   
+    
+   
+      
+    
+    
+      
+      .main-header-div-2{
+        background: transparent;
+        display: flex;
+        justify-content: space-around;
+        grid-column: 2/4;
+      }
+      
+      
+      
+      .main-header-div-2 li{
+        list-style: none;
+        padding: .3rem 0rem;
+      }
+      
+      .main-header-div-2 li a{
+        color:white;
+        text-decoration: none;
+        background: transparent;
+        padding: 0rem .5rem;
+        font-family:japan;
+        cursor: pointer;
+      }
+      
+      .main-header-div-3{
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 3s linear;
+        position: relative;
+        background:transparent;
+      }
+      
+      .main-header-div-3:hover > a .a0  {
+        display: none;
+      }
+      
+      .main-header-div-3 a{
+        height: 6rem;
+        width: 6rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        cursor: pointer;
+      }
+      
+     
+      
+      .main-header-div-3 a img{
+        background: #fff;
+        height: 6rem;
+        width: 6rem;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transition: all 2s linear;
+       cursor: pointer;
+      }
+      
+     
+        
+      
+      /*
+      .main-header-div-3-side-div{
+        display: none;
+        height: 9rem;
+        width: 9rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        position: absolute;
+        transition: all 2s linear;
+      }
+      */
+      /*
+.main-header-div-3-side-div{
+         transform: translateX(5rem);
+         font-size: 1.3rem;
+      }
+      */
+  
+      
+      /* ---------------section----------------------------------------*/
+      
+      .main-section{
+        margin-bottom: 4rem;
+        
+      }
+      
+      .main-section-div1{
+        background:white;
+       /* display: block;
+        justify-content: center;
+        align-items: center;*/
+        display: grid;
+        grid-template-columns: 80vw;
+        grid-template-rows: auto;
+        justify-content: space-around;
+        grid-gap: 2rem;
+        margin-top: 2rem;
+        
+      }
+      
+      .main-section-div1 img{
+        
+        width:80vw;
+        box-shadow: 1rem 1rem 3rem #8A8C8B;
+       transition: box-shadow 1s linear;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       cursor: pointer;
+      }
+      
+      .main-section-div1 img:hover{
+      box-shadow: 1rem 1rem 1rem #6C6D6D;
+      }
+    
+      
+      
+   .main-footer{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 2rem 40vh;
+     margin-top: 60px;
+     height: 40vh;
+     line-height: 2rem;
+   }
+   
+   .main-footer .main-footer-1p{
+     grid-column: 1/-1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-top: 3px solid black;
+     transform: translateY(-0.5rem);
+   }
+   
+   footer p{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: 'Viaoda Libre', cursive;
+     color:#4A4848;
+     font-size: 1.2rem;
+     text-transform: uppercase;
+   }
+   
+   .main-footer .links-foot{
+     border-right: 4px solid black;
+     border-left: 4px solid black;
+     border-radius: 47%;
+     margin-bottom: .4rem;
+     transform: translateY(-0.8rem);
+     width: 20vw;
+     background-color: #fff;
+     /*
+     background-image: radial-gradient(  #423ED3 , #A38CF6 );*/
+     box-shadow: inset 1px 1px 7px 2px #676767;
+    font-family:china;
+     color: #3B3A3A;
+   }
+   
+   .main-footer .social p{
+     box-shadow: -1px -1px 1px 1px #423ED3D9;
+     margin:.2rem 2rem;
+     font-family:japan;
+   }
+   
+   .main-footer .other p{
+   box-shadow: -1px -1px 1px 1px #423ED3D9;
+   margin:.2rem 2rem;
+   font-family:japan;
+   }
+   
+   .main-footer li{
+      list-style: none;
+       margin: 1rem 2rem;
+       box-shadow: .25rem .35rem .1rem #AEAEAE;
+       border: .1rem solid #E12255A8;
+   }
+   
+   footer li a{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     text-decoration: none;
+     color:#4A4848 ;
+     background-image: linear-gradient( 120deg, #E12255A8 50%, #FFFFFF 50%);
+     font-size: .9rem;
+     font-family:china;
+     cursor: pointer;
+   }
+   
+   
+    
+      
+    </style>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="main-header-div-1">
+     
+      <li class="profile"><a href="https://github.com/skilloo-coder"  >Profile</a></li>
+    </div>
+    <div class="main-header-div-2">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#service">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      
+    </div>
+    <div class="main-header-div-3">
+<!-------------------------------------------------------------------------------------------------
+       <div class="main-header-div-3-side-div"  id="mylinks">
+   
+   
+Ayush Gupta class:11 student "and want to be a profesional webdeveloper"
+         
+      </div>
+      ------------------------------->
+      <a name="home"><img src="ayush1.jpg" alt="Ayush" class="a1"></a>
+      
+      <a href="#"><img src="ayush.jpg" alt="Ayush" class="a0"></a>
+      
+
+    </div>
+  </header>
+  <a name="service"></a>
+  <section class="main-section">
+    <div class="main-section-div1">
+      <a href="https://skilloo-coder.github.io/WhereToGo.com/travel%20and%20tourism.html"    target="_ayush">
+        <img src="Ayush-travel.jpg" alt="Ayush-the-traveler" class="section-div-a1">
+        </a>
+      <a href="https://skilloo-coder.github.io/website_for_drivers/"  target="_ayush">
+        <img src="Hire.jpg" alt="Hire-cab" class="section-div-a2">
+        </a>
+      <a href="https://skilloo-coder.github.io/Ayush-Gupta_project-1/" target="_ayush">
+        <img src="Tim Berners-Lee.jpg" alt="Tim-Berners-Lee" class="section-div-a3">
+        </a>
+    </div>
+  </section>
+  <a name="contact"></a>
+  <footer class="main-footer">
+    <div class="main-footer-1p">
+     <p class="links-foot">links</p>
+    </div>
+ <div class="social" class="foot-common"> 
+     <p>social</p>
+    <li> <a href="https://www.facebook.com/103074255276182/posts/103078118609129/?substory_index=0" target="_ayush">Facebook</a></li>
+    <li> <a href="https://www.instagram.com/invites/contact/?i=c7q96sz5zpk9&utm_content=a7qyb01" target="_ayush">Instagram</a></li>
+    <li> <a href="mailto:vishalgupta6244@gmail.com?subject=Hi Ayush&body=I am your" target="_ayush">Mail</a></li>
+ </div>
+ <div class="other" class="foot-common">
+   <p>other</p>
+    <li> <a href="https://github.com/skilloo-coder" target="_ayush">Github</a></li>
+    <li> <a href="https://www.w3schools.com/html/default.asp" target="_ayush" class="foot-html">HTML TUTORIAL</a></li>
+    <li><a href="https://youtu.be/mLOhGKYS-Js" target="_ayush">Youtube</a></li>
+ </div>
+  </footer>
+  <!-----
+  
+  <script>
+    function myfunction() {
+    var showhide = document.getElementById('mylinks');
+    if(showhide.style.display === "block")
+    {
+    showhide.style.display = "none";
+    } 
+    else{
+    showhide.style.display = "block";
+    }
+  }
+  </script>
+  --------->
+</body>
+
+</html>
