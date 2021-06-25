@@ -15,6 +15,14 @@
         margin: 0; padding:0; 
         box-sizing: border-box;
       }
+        
+       #preloader{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #fff url(loader.gif) no-repeat center;
+  z-index: 9999;
+}
       
      @font-face{
       font-family:china;
@@ -357,21 +365,31 @@ Ayush Gupta class:11 student "and want to be a profesional webdeveloper"
     <li><a href="https://youtu.be/mLOhGKYS-Js" target="_ayush">Youtube</a></li>
  </div>
   </footer>
-  <!-----
+  
   
   <script>
-    function myfunction() {
-    var showhide = document.getElementById('mylinks');
-    if(showhide.style.display === "block")
-    {
-    showhide.style.display = "none";
-    } 
-    else{
-    showhide.style.display = "block";
-    }
-  }
+
+
+     console.log('Hello World!');
+
+var slack = document.getElementById('preloader');
+function myFunction(){
+  preloader.style.display = 'none';
+}
+
+   // function myfunction() {
+   // var showhide = document.getElementById('mylinks');
+   // if(showhide.style.display === "block")
+   // {
+ //   showhide.style.display = "none";
+ //   } 
+  //  else{
+ //   showhide.style.display = "block";
+  //  }
+ // }
+
   </script>
-  --------->
+ 
 </body>
 
 </html>
