@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Source code</title>
+    
+    <!--------g-fonts-------->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    
+    <style>
+      *{
+        margin: 0; padding:0; 
+        box-sizing: border-box;
+      }
+      
+     @font-face{
+      font-family:china;
+      src:url(go3v2.ttf);
+      }
+      
+     @font-face{
+     font-family:japan;
+     src:url(JAPANESE_2020.ttf);
+     }
+      
+    html{
+      scroll-behavior: smooth;
+    }
+    
+      .main-header{
+        color:white;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1.8rem 10rem;
+        background-image: url(header-background.jpg);
+        background-size: cover;
+      }
+      
+      .main-header-div-1{
+        background-blend-mode: darken;
+        position: relative;
+        grid-row: 1/2;
+      }
+    /*  
+      .main-header-div-1:hover .main-header-div-3-side-div{
+        transform: translateX(20rem);
+      }
+      */
+      
+      
+      
+      
+    
+      .main-header-div-1 li{
+        padding: .3rem 2.3rem;
+        margin-top: .1rem;
+        list-style: none;
+        background: transparent;
+        position: absolute;
+        width:20%;
+        top:.07rem;
+      }
+      
+      .main-header-div-1 li a{
+        color:white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:china;
+        cursor: pointer;
+      }
+  
+  /*    .main-header-div-1 li :hover >  .profile{
+        
+      }*/
+    
+      .main-header-div-1 .profile{
+        font-size: 0.8rem;
+        background: transparent;
+        color:transparent;
+        cursor: pointer;
+      }
+      /*
+    .main-header-div-1 .profile:hover{
+      display: none;
+      color: transparent;
+      background: transparent;
+    }
+    */
+   
+    
+   
+      
+    
+    
+      
+      .main-header-div-2{
+        background-blend-mode: darken;
+        display: flex;
+        justify-content: space-around;
+        grid-column: 2/4;
+      }
+      
+      
+      
+      .main-header-div-2 li{
+        list-style: none;
+        padding: .3rem 0rem;
+      }
+      
+      .main-header-div-2 li a{
+        color:white;
+        text-decoration: none;
+        background: transparent;
+        padding: 0rem .5rem;
+        font-family:japan;
+        font-size: 0.6rem;
+        cursor: pointer;
+      }
+      
+      .main-header-div-3{
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 3s linear;
+        position: relative;
+        background:transparent;
+      }
+      
+      .main-header-div-3:hover > a .a0  {
+        display: none;
+      }
+      
+      .main-header-div-3 a{
+        height: 6rem;
+        width: 6rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        cursor: pointer;
+      }
+      
+     
+      
+      .main-header-div-3 a img{
+        background: #fff;
+        height: 6rem;
+        width: 6rem;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transition: all 2s linear;
+       cursor: pointer;
+      }
+      
+     
+        
+      
+      /*
+      .main-header-div-3-side-div{
+        display: none;
+        height: 9rem;
+        width: 9rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        position: absolute;
+        transition: all 2s linear;
+      }
+      */
+      /*
+.main-header-div-3-side-div{
+         transform: translateX(5rem);
+         font-size: 1.3rem;
+      }
+      */
+  
+      
+      /* ---------------section----------------------------------------*/
+      
+      .main-section{
+        margin-bottom: 4rem;
+        background-color: transparent;
+      }
+      
+      .main-section-div1{
+        background: transparent;
+       /* display: block;
+        justify-content: center;
+        align-items: center;*/
+        display: grid;
+        grid-template-columns: 80vw;
+        grid-template-rows: auto;
+        justify-content: space-around;
+        grid-gap: 2rem;
+        margin-top: 2rem;
+      }
+      .images-detail{
+        box-shadow: 3px 3px 10px #8A8C8B;
+        transition: all .5s linear;
+        background-color: #EDEBEB;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      
+      .main-section-div1 img{
+        width:80vw;
+       /* box-shadow: 1rem 1rem 3rem*/ #8A8C8B;
+       transition: box-shadow 1s linear;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       cursor: pointer;
+      }
+      
+      .main-section-div1 .images-detail:hover{
+      box-shadow: 5px 5px 15px #6C6D6D;
+      }
+    
+    .about-web{
+      background-color: #EDEBEB;
+      padding: 4px 6px;
+      border-top: 1px solid #989898;
+    }
+    
+    .about-web h2{
+      font-family: 'Jomhuria' , cursive;
+      font-size: 18px;
+      color: #3F3F3F;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      letter-spacing: 1px;
+    }
+    
+    .about-web p{
+      font-family: 'Otomanopee One', sans-serif;
+      font-size: 10px;
+      color: #3F3F3F;
+    }
+    #textarea1{
+      background-color: #fff; 
+      margin-left:6px;
+      margin-right:4px;
+      margin-top:4px;
+      margin-bottom:0px;
+      padding: 2px 4px;
+      width: 76vw;
+      height:35vh;
+      font-size: 4px;
+      color: #4D4C4C;
+      border:1px solid #282828;
+    }
+    
+   #textarea2{
+    background-color: #fff;
+    margin-left:6px;
+    margin-right:4px;
+    margin-top:4px;
+    margin-bottom:0px;
+    padding: 2px 4px;
+    width: 76vw;
+    height:20vh;
+    font-size: 4px;
+    color: #4D4C4C;
+    border:1px solid #282828;
+    }
+    span{
+       float:right;
+       border: 1px solid black;
+       padding: 1px 5px;
+       display:flex;
+       align-items: center;
+       margin-right: 4px;
+       border-radius: 50px;
+       height: 1rem;
+       background: #E3E3E3;
+       -webkit-text-fill-color:#535050;
+       }
+    
+    .hashtags{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows:2rem;
+      grid-gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+      transform: translateY(-2px);
+      margin-left: 5px;
+    }
+    .hashtags a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #E3E3E3;
+      color:#535050;
+      font-size: 10px;
+      padding: 2px 2px;
+      border: 1px solid #282828;
+      border-radius: 70px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .3s ease-in;
+    }
+    .hashtags a:hover{
+      background-color: #F2F2F2;
+      color:#414141;
+    }
+    
+      /*__________________footer__________________*/
+    .main-footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+   .footBg{
+     background-image: linear-gradient(360deg ,#59FFB1 , #fff);
+     width:100%;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+     display: block;
+     justify-content: center;
+     align-items: center;
+   }
+  
+  .main-footer .main-footer-1p{
+    padding: 4px 6px;
+    font-size: 40px;
+    font-family: 'Jomhuria' , cursive;
+  }
+ .main-footer .footer-div-2 .footer-div-2-1{
+     display:grid;
+     grid-template-columns:20px 1fr 3fr;
+     grid-template-rows: 1fr 1fr;
+     grid-row-gap: 10px;
+     justify-content: center;
+     align-items: center;
+   }
+.main-footer .footer-div-2 .other{
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.main-footer .footer-div-2 .social{
+  grid-column: 2/3;
+}
+.main-footer .foot-common{
+  font-family: 'Otomanopee One', sans-serif;
+}
+   
+footer .footer-div-2 li{
+  list-style: none;
+}
+footer .footer-div-2 li a{
+     display: flex;
+     justify-content: ;
+     align-items: center;
+     text-decoration: none;
+     color:#4A4848 ;
+     font-size: 12px;
+     font-family:china;
+     cursor: pointer;
+     line-height: 1.3rem;
+   }
+    
+   .skilloo-coder_footer_copyright{
+      background:#2E2E2E;
+      color:white;
+      font-size: 1em;
+      display: flex;
+     justify-content: center;
+     align-items: center;
+     line-height: 1.8em;
+   }
+  .skilloo-coder_footer_copyright p{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     letter-spacing: 1px;
+  }
+  .skilloo-coder_footer_copyright p a{
+    text-decoration: none;
+    color: #fff;
+  }
+/*##########################################################################
+  */
+    
+      
+    </style>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="main-header-div-1">
+     
+      <li class="profile"><a href="https://github.com/skilloo-coder"  >Profile</a></li>
+    </div>
+    <div class="main-header-div-2">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#service">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      
+    </div>
+    <div class="main-header-div-3">
+<!-------------------------------------------------------------------------------------------------
+       <div class="main-header-div-3-side-div"  id="mylinks">
+   
+   
+Ayush Gupta class:11 student "and want to be a profesional webdeveloper"
+         
+      </div>
+      ------------------------------->
+      <a href="index.html"><img src="ayush1.jpg" alt="Ayush" class="a1"></a>
+      
+      <a href="#"><img src="ayush.jpg" alt="Ayush" class="a0"></a>
+      
+
+    </div>
+  </header>
+  <a name="service"></a>
+  <section class="main-section">
+    <!----My-website-Images--->
+    <div class="main-section-div1">
+      <!----image1------->
+    <div class="images-detail">
+      <div class="web-image">
+      <a href="https://skilloo-coder.github.io/WhereToGo.com/travel%20and%20tourism.html"    target="_ayush">
+        <img src="Ayush-travel.jpg" alt="Ayush-the-traveler" class="section-div-a1">
+        </a>
+       </div>
+        <div class="about-web">
+          <h2><b>Travel Website</b></h2>
+          <p>This website is create on the topic of travel and tourism in India . If you want this source-code. I have not provided all webpages code because this little big website . If you want all webpage's code . So, click on source-code .
+          <span id="co-btn">copy</span>
+          </p>
+        </div>
+<!--|||||||||||||||||||||||||||||||||||| ||||||-T-E-X-T-A-R-E-A-||||S-T-A-R-T--
+-->
+<textarea name="code" id="textarea1" >
+<!-----------------I have not provided any images of websites---So, you have to download from my github-profile  or you can use your own images for websites----------------------------------------------->
+<html>
+<head>
+ <title>Travel and Tourism by Ayush Gupta class 10 A</title>
+ 
+ <!---------css-------->
+ <style>
+ *{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ body{
+   margin:auto;
+   direction:flow;
+   background: #51D5E1EB;
+ }
+ 
+ body a{text-decoration: none;}
+ 
+.margin{ margin-left:30px;}
+
+.border{
+  border-radius:20px 20px;
+}
+
+.nextborder{
+  border-radius:15px 15px;
+}
+
+.placeName{
+  border: 4px solid #000000;
+  margin-top: 25px;
+  font-size:8px;
+  height:823px;
+  max-width: 574px;
+  margin-left:30px;
+}
+
+footer{
+  background:#676DB7;
+  background-size: cover;
+  display:flex;
+  border:2px solid #CC5151;
+  list-style: circle;
+  margin-top: 30px;
+  padding:8px 0px;
+}
+
+footer li{
+  margin:auto;
+  padding: 0px 3px;
+  display:flex;
+}
+
+
+
+
+header {
+  height:25vh;
+  background-size: cover;
+  background: rgba(0,0,0,0.4) url('Spiderman.jpg');
+  background-blend-mode: darken;
+  overflow: hidden;
+  position: sticky;
+  top:0;
+  cursor:pointer;
+  /*background:#F65B5B ;*/
+}
+header nav{
+  display:flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+header .myWeb{
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.myWeb p{
+  width:10vh;
+  margin-right: 0px;
+}
+
+.myWeb img{
+ border: 5px solid white;
+ border-radius: 50px;
+ margin-right: 70px;
+ height:183px;
+ width:275px;
+}
+
+header nav div.a{ margin:5px 5px;}
+
+header nav div.b{
+  margin:5px 0px;
+  width: 350px;
+  /*justify-content: center;
+  text-align: center;*/
+  padding:15px;
+  color:white;;
+}
+.navImage{
+  border-radius: 550px ;
+  border: 4px solid white;
+  height:50px;
+  width:50px;
+  margin: 10px 10px;
+}
+
+.logo{
+  display:flex;
+}
+
+.navlist{
+  margin:auto;
+  width:600px;
+  display: flex;
+}
+
+.list{
+  color:white;
+  display:flex;
+  flex-direction: right;
+  margin:auto;
+/* margin-right: 0px;
+ margin-top: 0px;
+ margin-left: 2px;
+ margin-bottom: 0px;*/
+}
+
+.list li{
+  list-style: none;
+  padding:5px 10px;
+  align-items: center;
+  /*justify-content: center;*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left:10px;
+  margin-right:50px;
+}
+
+.menu a{
+  color: white;
+  text-decoration: none;
+}
+
+.about a{
+  color: white;
+  text-decoration: none;
+}
+
+.extraImage{
+  display:flex;
+ font-sixe:15px;
+ height:1200px;
+}
+.e-image{
+  width: 50px;
+  margin-left: 25px;
+}
+
+.e-image img{
+  margin-top: 27px;
+  margin-bottom: 0px;
+}
+
+marquee img{
+  height:20px; width:20px;
+  border:1px solid black;
+  border-radius: 15px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+    /*-----Additional-links---*/
+
+ .add-links{
+  padding: 0px 15px;
+ border:2px solid black;
+  width:250px;
+}
+
+.add-links p{
+  background: #0591F7;
+  color: white;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  padding-left: 25px;
+  margin-bottom: 0px;
+}
+
+.and2{
+  display: flex;
+  align-items: center;
+}
+
+.links{
+  background:#E5274C;
+  color:white;
+  border: 2px solid white;
+  padding: 5px 15px;
+}
+
+.links:hover{
+  background:#ddd;
+  color:black;
+  border: 2px solid white;
+  padding: 5px 15px;
+}
+
+.and3{
+display: flex;
+align-items: center;
+margin-top: 3px;
+}
+
+.links2{
+background:#E5274C;
+color:white;
+border: 2px solid white;
+padding: 5px 15px;
+/*margin-left: 132px;*/
+}
+  
+  .links2:hover{
+   background:#ddd;
+   color:black;
+   border:2px solid white;
+   padding:5px 15px; 
+   }
+
+  .and4{
+display: flex;
+align-items: center;
+margin-top: 3px;
+}
+
+.links3{
+background:#E5274C;
+color:white;
+border: 2px solid white;
+padding: 5px 19px;
+/*margin-left: 132px;*/
+}
+  .links3:hover{ 
+  background:#ddd;
+   color:black;
+   border:2px solid white;
+   padding:5px 15px;
+  }
+
+.and5{
+display: flex;
+align-items: center;
+margin-top: 3px;
+}
+
+.links4{
+background:#E5274C;
+color:white;
+border: 2px solid white;
+padding: 5px 19px;
+/*margin-left: 132px;*/
+}
+  .links4:hover{ 
+  background:#ddd;
+   color:black;
+   border:2px solid white;
+   padding:5px 15px;
+  }
+
+.and6{
+display: flex;
+align-items: center;
+margin-top: 3px;
+}
+
+.links5{
+background:#E5274C;
+color:white;
+border: 2px solid white;
+padding: 5px 19px;
+/*margin-left: 132px;*/
+}
+
+  .links4:hover{ 
+   background:#ddd;
+   color:black;
+   border:2px solid white;
+   padding:5px 15px;
+  }
+
+ </style>
+ 
+ 
+ </head>
+ 
+ 
+ 
+<body link="black" alink="voilet" vlink="black"><FONT SIZE = "6%">
+  
+  <header>
+    
+    <nav >
+     <div class="logo">
+      <div class="a"> <img src="ayush.jpg" class="navImage"></div>
+      <div class="b"> Ayush The Traveler</div>
+    </div>
+    <div class="navlist">
+      <ul class="list">
+        <li class="menu"><a href="travel and tourism.html">HOME</a></li>
+        <li class="about"><a href="About.html">ABOUT US</a></li>
+      
+      </ul>
+    </div>
+    
+  
+    </nav>
+    <div class="myWeb">
+      <p>
+        <h3> "Photography is the art of making memories tangible"</h3>
+        
+      </p>
+      
+      
+      
+        <img src="Taj-Mahal.jpg">
+      </div>
+    
+    
+  </header>
+  
+  
+  <hr>
+  
+  
+<marquee  style = "border:solid" height="" class="border" bgcolor="yellow">  Travel India  
+</MARQUEE></font>
+
+
+ <HR>
+   
+   
+   <!--div class="main">
+     <form action="https://www.google.com/search" method="GET">
+     
+     <input type="text" name="q" placeholder="search">
+     <input type="submit" value="search">
+  </div-->
+  
+  <font face="serif" size="6%"><center><U><h1>Travel and Tourism</H1></u></CENTER></font><font size="6%">
+
+
+
+
+<p align="right" class="pUnderline"> <marquee align = "" width = "30%" height= "" direction= "right" style = "border:solid" class="nextborder" bgcolor="yellow"><a href="#In India ">IN INDIA</a></marquee></p></font><br><br>
+ 
+ 
+ 
+ <font face size = "5%"> <li><b>Top 10 places name for traveling</b><br>
+
+ 
+
+ 
+ 
+ <hr color="black">
+ <section class="margin">
+ <img src="Taj-Mahal.jpg" width="275px" height="183px" style="border:solid">&nbsp;&nbsp;&nbsp; <a href="Intro.html"><img src="Mumbai.jpg" width="275px" height="183px" style="border:solid"></a>&nbsp;&nbsp;&nbsp;<img src="Jaipur.jpg" width="275px" height="183px" style="border:solid">
+ </section>
+ 
+ 
+<div class="extraImage">
+  
+<div class="placeName">
+ <a name="In India"><ol>&nbsp; <li><b><u><!--mark><a href="https://en.m.wikipedia.org/wiki/Mumbai"--><a href="Mumbai.html">Mumbai </a></u></b>-<a href="https://en.m.wikipedia.org/wiki/Gateway of India">Gateway of India , Elephanta Caves </a>
+
+
+<hr>
+
+<li><b><u><a href="Delhi.html">Delhi</a></u></b> - <a href="https://en.m.wikipedia.org/wiki/India Gate">India Gate , Red Fort , Qutub Minar , Jama Masjid </a>
+
+
+<hr>
+
+<li><b><u><a href="Jaipur.html">Jaipur</a></b></u> - <a href="https://en.m.wikipedia.org/wiki/Hawa Mahal">Hawa Mahal , Amber Palace , Jantar Mantar</a>
+
+<hr>
+
+<li><b><u><a href="Agra.html">Agra</a></b></u> - <a href="https://en.m.wikipedia.org/wiki/Taj Mahal">Taj Mahal, Agra Fort , Moti Masjid , Agra Bagh
+</a>
+
+<hr>
+
+<li><b><u><a href="Goa.html">Goa</a></b></u> -<a href="https://en.m.wikipedia.org/wiki/Dudhsagar Falls"> Dudhsagar Falls , Calangute Beach , Colva Beach
+</a>
+
+<hr>
+
+
+<li><b><u><a href="Kolkata.html">Kolkata</a></u></b> -<a href="https://en.m.wikipedia.org/wiki/Kolkata"> Howrah Bridge , Victoria Memorial , Nicco Park , Marble Palace </a>
+
+
+<hr>
+
+
+<li><b><u><a href="https://en.m.wikipedia.org/wiki/Varanasi">Varanasi</a></b></u> - Shri Kashi Vishwanath temple , Assi Ghat , Ramnagar Fort
+
+
+<hr>
+
+
+<li><b><u><a href="https://en.m.wikipedia.org/wiki/Manali">Manali </a>-</b></u> Hadimba Devi temple , Manu temple , Bhrigu lake
+
+
+<hr>
+
+
+
+<li><b><u><a href="https://en.m.wikipedia.org/wiki/Chennai">Chennai</a></b></u> - Marina Beach , Santhome Cathedral Basilica
+
+
+<hr>
+
+
+<li><b><u><a href="https://en.m.wikipedia.org/wiki/Mysuru">Mysuru</a></b></u> - Brindavan Gardens , Ranganathittu Bird Sanctuary
+
+</ol></font></p></font>
+
+<div class="add-links">
+ <p> Additional Links</p>
+ 
+ 
+  <div class="and2">
+  <div>
+  i) Doraemon all movies explain in hindi....
+  </div>
+  
+  
+  <a href="https://youtube.com/playlist?list=PL8vvN5KZWAhbSiRw03dkaJNo7esgGjijn"><div class="links">Click to watch</div></a>
+</div>
+<div>
+  ii) Create website in Android on
+</div>
+<div class="and3">
+  <div>
+  
+  My You Tube Channel......................................
+</div>
+   
+  <a href="https://youtu.be/vc7Tyavnivg"><div class="links2">Click to watch
+ 
+
+
+ </div></a>
+</div><br>
+<div class="and4">
+  <div>
+  iii)Follow me on Instagram............................
+</div>
+
+ <A href="https://www.instagram.com/invites/contact/?i=c7q96sz5zpk9&utm_content=a7qyb01"><div class="links3">INSTAGRAM</div></A>
+   
+
+</div>
+ <br>  <div class="and5">
+  <div>
+  iv) Download Thop Tv ( थोप टीवी )....
+  </div>
+  
+  
+  <a href="https://itatube.net/thoptvtemp5itatube"><div class="links4">Download</div></a>
+</div>
+ <br>
+
+<div class="and6">
+
+  <div>
+
+  iii)Follow me on Facebook............................
+
+</div>
+
+ <A href="https://www.facebook.com/profile.php?id=100037792790170"><div class="links5">FACEBOOK</div></A>
+
+   
+
+</div>
+</div>
+  </div>
+  <div class="e-image">
+    <img src="delhi.jpg"  width="275px" height="183px" style="border:solid">
+    <img src="church.jpg"  width="275px" height="183px" style="border:solid">
+    <img src="Victoria.jpg"  width="275px" height="183px" style="border:solid">
+    <img src="Varanasi.jpg"  width="275px" height="183px" style="border:solid">
+  </div>
+</div>
+
+
+
+<footer>
+
+
+copyright &copy; all rights reserved
+
+<li><a href ="mailto:Ayush.vishalgupta6244@gmail.com?subject=hi&body=hi">contact us</a>
+
+
+
+<li><a href="https://youtube.com/playlist?list=PL8vvN5KZWAhbSiRw03dkaJNo7esgGjijn">Doraemon movie:Chronicle_of_the_Moon_Exploration </a></footer>
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
+
+</textarea>
+<!--|||||||||||||||||||||||||||||||||||| ||||||-T-E-X-T-A-R-E-A-|||||||||-E-N-D
+-->
+<div class="hashtags">
+  <a href="https://github.com/skilloo-coder" target="_ayush">#github-Profile</a>
+  <a href="https://github.com/skilloo-coder/WhereToGo.com" target="_ayush">#source-code</a>
+</div>
+ </div>
+ <!------
+#######################################
+#######################################
+--->
+          <!----image2------->
+     <div class="images-detail">
+       <div class="web-image">
+      <a href="https://skilloo-coder.github.io/website_for_drivers/"  target="_ayush">
+        <img src="Hire.jpg" alt="Hire-cab" class="section-div-a2">
+        </a>
+        </div>
+        <div class="about-web">
+          <h2><b>Hire My Cab</b></h2>
+          <p>This website is create on the topic of cab hiring . If you want this source-code. <span id="co-btn">copy</span>          </p>
+        </div>
+  <!--||||||||||||||||||||||||||||||||||||||||||-T-E-X-T-A-R-E-A-||||S-T-A-R-T-2--->
+  <textarea name="code" id="textarea1">
+<!-------------------------HTML-------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+  <nav class="nav">
+    <li class="list"> <img src="logo.png"></li>
+     <li class="list1"><a href="index.html">Hire</a></li>
+     <li class="list"><a href="Gallery.html">Gallery</a></li>
+     <li class="list"><a href="About.html">About Us</a></li>
+     <li class="list"><a href="">Contact Us</a></li>
+     
+  </nav>
+  </header>
+  
+  <section>
+  
+      
+      <div class="sec1">
+        Hire My cab 
+        <p>
+          I live in a metro city. I have 10-15 years experience.
+        </p>
+      </div>
+    
+  </section>
+ 
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
+  </textarea>
+<!--|||||||||||||||||||||||||||||||||||| ||||||-T-E-X-T-A-R-E-A-|||||||||-E-N-D-2-->
+<textarea name="code" id="textarea2">
+<!--------------------------CSS-------------------------->
+
+  *{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+    
+}
+
+header{
+  position: sticky;
+  top: 0;
+  
+}
+
+.nav{
+  
+  width: 100vw;
+  background: #333;
+  color: white;
+  list-style: none;
+  display: inline-flex;
+  
+}
+
+.nav img{
+  width: 48px;
+  height: 30px;
+  border: 2px solid white;
+  
+}
+
+
+
+.list{
+  margin: 20px;
+}
+
+.list1{
+  margin: 20px;
+
+}
+
+.list a{
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.list1 a {
+  -webkit-text-stroke-width: 1px;
+  font-size: 30px;
+  color: #E43232;
+  text-decoration: none;
+  
+}
+
+
+/*------section-------*/
+
+
+.sec1{
+  background: url('ph4.jpeg');
+  background-size: cover;
+  padding: 70% 15%;
+  color: white;
+  letter-spacing: 2px;
+  -webkit-text-stroke-width: 5.5px;
+  -webkit-text-stroke-color: white;
+  font-size: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  height: 100%;
+  width: 100vw;
+}
+
+.sec1 p{
+  -webkit-text-fill-color: black;
+    -webkit-text-stroke-width: 3px;
+  font-size: 100px;
+}
+</textarea>
+        <div class="hashtags">
+          <a href="https://github.com/skilloo-coder" target="_ayush">#github-Profile</a>
+          <a href="https://github.com/skilloo-coder/website_for_drivers" target="_ayush">#source-code</a>
+          <a href="" id="co-btn">copy</a>
+        </div>
+       </div>
+<!----#############################################################################-->
+          <!----image3------->
+      <div class="images-detail">
+        <div class="web-image">
+      <a href="https://skilloo-coder.github.io/Ayush-Gupta_project-1/" target="_ayush">
+        <img src="Tim Berners-Lee.jpg" alt="Tim-Berners-Lee" class="section-div-a3">
+        </a>
+        </div>
+        <div class="about-web">
+          <h2><b>Tim Berners-Lee</b></h2>
+          <p>This website is create on the behalf of an interesting fact on Professor Sir Tim Berners-Lee . If you want this source-code. <span id="co-btn">copy</span>
+          </p>
+        </div>
+<!--|||||||||||||||||||||||||||||||||||| ||||||-T-E-X-T-A-R-E-A-||||S-T-A-R-T-3--->
+<textarea name="code" id="textarea1">
+<!----------------------HTML--------------------> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tim Berners-Lee</title>
+  
+  <!-- HTML -->
+  
+<!--------g-fonts-------->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+  <!-- Custom Styles -->
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!----------------BODY---------------------------------->
+
+<body onload="myFunction()">
+       <div id="preloader">
+       </div>
+   
+  
+  <!-----------------BODY-HEADER--------------------------------->
+  
+  <header class="BODY-HEADER">
+    <!---------------BODY-HEADER-DIV-1---------------------------------->
+    <div class="BODY-HEADER-DIV-1">
+      <li><a href="#">Ayush</a></li>
+    </div>
+   <!---------------BODY-HEADER-DIV-2---------------------------------->
+ 
+    <div class="BODY-HEADER-DIV-2">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#">Gallary</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </div>
+  </header>
+  
+  <!-----------------BODY-SECTION----------------------------------------->
+  
+  <section class="body-section">
+    <!-----------div-1--------------->
+    
+    <div class="body-section-div-1">
+      <p><a name="home">" Photography is the art of making memories tangible " .</a></p>
+      <img src="photo.jpg" alt="photo">
+    </div>
+    
+    <!-----------div-2--------------->
+    
+    <div class="body-section-div-2">
+      <img src="Sir_Tim_Berners-Lee.jpg" alt="Sir_Tim_Berners-Lee">
+      <p>Professor sir,
+      Tim Berners-Lee</p>
+    </div>
+    
+    <!-----------div-3--------------->
+    
+    <div class="body-section-div-3">
+      <p>
+        The Web has been a popular medium for storing and sharing photos ever since the first photograph was published on the web by Tim Berners-Lee in 1992 (an image of the CERN house band Les Horribles Cernettes). Today popular sites such as Flickr, PhotoBucket and 500px are used by millions of people to share their pictures.
+      </p>
+    </div>
+    
+     </section>
+     
+     <!-----------------ABOUT-SECTION----------------------------------------->
+     
+     <section class="about-section">
+       
+<!-------------div-1------------------>
+       
+       <div class="about-section-title">
+         <p>
+           <a name="about">About Me</a>
+         </p>
+       </div>
+       
+<!-------------div-2------------------>
+       
+       <div class="about-section-image">
+         <img src="ayush.jpg" alt="Ayush">
+         <p>
+           Ayush Gupta
+         </p>
+       </div>
+       
+<!-------------div-3------------------>
+       
+       <div class="about-section-para">
+         <p>
+           My name is Ayush Gupta . Living in a small village . Now , I am studying in class-11<sup>th</sup> . I want to be a professional <a href="https://en.m.wikipedia.org/wiki/Web_developer">Web Developer </a> . 
+         </p>
+       </div>
+       
+       
+     </section>
+     
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
+
+</textarea>
+<textarea name="code" id="textarea2">
+<!-----------------------CSS--------------------->
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#preloader{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #fff url(loader.gif) no-repeat center;
+  z-index: 9999;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@font-face{
+  font-family:china;
+  src:url(go3v2.ttf);
+}
+
+@font-face{
+  font-family: fancy;
+  src:url(Roboto-Bold.ttf);
+}
+
+/*-----------------BODY-HEADER------------------------------------------*/
+
+.BODY-HEADER{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
+
+
+/*-----------------BODY-HEADER-DIV-1------------------------------------------*/
+
+.BODY-HEADER-DIV-1{
+  display: flex;
+  transform: translate(2rem, 1.5rem);
+ /* transform: translateY(.1rem);
+ background: blue;*/
+ align-items: center;
+}
+.BODY-HEADER-DIV-1 li{
+  font-size: 4rem;
+  font-family: china;
+  cursor: pointer;
+}
+
+.BODY-HEADER-DIV-1 li a{
+  color: #535958;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*-----------------BODY-HEADER-DIV-2------------------------------------------*/
+
+.BODY-HEADER-DIV-2{
+  display: flex;
+  justify-content: space-evenly;
+  transform: translatey(1.5rem);
+  font-size:2rem;
+  font-family: fancy;
+  align-items: center;
+  /*font-family: 'Viaoda Libre', cursive;*/
+}
+
+.BODY-HEADER-DIV-2 li{
+  display:flex;
+  padding: 0rem 2rem;
+  height: 3.5rem;
+  align-items: center;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.BODY-HEADER-DIV-2 li:hover{
+  box-shadow: 1rem 1rem 1rem #707076;
+  background-image: linear-gradient(120deg, #E9154B9E 50%, transparent 50%);
+}
+
+.BODY-HEADER-DIV-2 li a{
+  text-decoration: none;
+  color:#535958;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.BODY-HEADER-DIV-2 li a:hover{
+  color: #262827;
+}
+
+/*-----------------BODY-SECTION------------------------------------------*/
+
+
+/*-----------------BODY-SECTION-DIV-1------------------------------------------*/
+.body-section-div-1{
+  display: flex;
+  width: 100vw;
+  height: 20rem;
+  justify-content: space-around;
+  transform: translateY(5rem);
+  font-size: 3.1rem;
+  background: linear-gradient(to bottom left, #F9F9F9 0%,#FF0000 100%);
+ /* background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);*/
+}
+
+.body-section-div-1 P{
+  color: #FAF6F6;
+  transform: translatey(3rem);
+  height: 10rem;
+  width: 30.3rem;
+  text-align: center;
+  font-family: 'Viaoda Libre', cursive;
+}
+
+.body-section-div-1 img{
+  border-radius: 3rem;
+  box-shadow: 2rem 2rem 3.3rem;
+  /*transform: translateX(10rem);*/
+}
+
+/*-----------------BODY-SECTION-DIV-2-----------------------------------------*/
+.body-section-div-2{
+  transform: translate(18rem ,15rem);
+  display: block;
+  height: 95rem;
+  width: 74.8rem;
+  font-size: 3rem;
+  box-shadow: 2rem 2rem 5rem;
+}
+
+.body-section-div-2 img{
+  display: flex;
+  margin: auto;
+  padding-top: 4.7rem;
+}
+
+
+.body-section-div-2 P{
+  color: white;
+  text-align: center;
+  background: blue;
+  transform: translateY(2.8rem);
+  font-family: fancy;
+}
+
+/*-----------------BODY-SECTION-DIV-3-----------------------------------------*/
+
+.body-section-div-3{
+  box-shadow: 2rem 5rem 2rem;
+  background: linear-gradient(to right,red,blue);
+  color: #616163;
+  width:100rem;
+  height: 30rem;
+  transform: translate(5.5rem, 27rem);
+  font-size: 3.5rem;
+  font-family: 'Viaoda Libre', cursive;
+  box-shadow: 2rem 2rem 2rem #4c4c4c;
+  text-align: justify;
+}
+
+.body-section-div-3 P{
+  transform: translateY(2.5rem);
+  background:white;
+}
+
+
+
+/*-------------ABOUT-SECTION----------------------------------------*/
+
+.about-section{
+ transform: translatey(50rem);
+ display: block;
+}
+
+/*-------------ABOUT-SECTION-DIV-1--------------------------------------*/
+
+.about-section-title{
+  display: flex;
+  width: 74.8rem;
+  height: 5rem;
+  transform: translate(18rem , -2rem);
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section-title p{
+  color: #625858;
+  font-size: 6rem;
+  font-family: cursive;
+  padding: 0rem 3rem;
+  text-shadow: .6rem .5rem .7rem #9B9292;
+}
+
+/*-------------ABOUT-SECTION-DIV-2----------------------------------------*/
+.about-section-image{
+  transform: translate(18rem, 5rem);
+  display: block;
+  height: 75rem;
+  width: 74.8rem;
+  font-size: 3rem;
+  box-shadow: 2rem 2rem 5rem;
+}
+
+.about-section-image img{
+  width: 65rem;
+  height: 65rem;
+  display: flex;
+  margin: auto;
+  padding-top: 4.7rem;
+}
+
+.about-section-image p{
+  color: white;
+  text-align: center;
+  background: blue;
+  transform: translateY(3.5rem);
+  font-family: fancy;
+}
+
+/*-------------ABOUT-SECTION-DIV-3---------------------------------------*/
+
+.about-section-para{
+  box-shadow: 2rem 5rem 2rem;
+  background: linear-gradient(to right,red,blue);
+  color: #616163;
+  width:100rem;
+  height: 15rem;
+  transform: translate(5.5rem, 19rem);
+  font-size: 3.5rem;
+  font-family: 'Viaoda Libre', cursive;
+  box-shadow: 2rem 2rem 2rem #4c4c4c;
+  text-align: justify;
+  margin-bottom: 80rem;
+}
+
+.about-section-para p{
+  transform: translateY(2.5rem);
+  background:white;
+}
+
+.about-section-para p a{
+  text-decoration: none;
+  color:#616163;
+  padding: 0rem 2rem;
+  transition: all .5s;
+}
+
+.about-section-para p a:hover{
+  box-shadow: 1rem 1rem 1rem;
+}
+
+/*<!----------end-part-------->*/
+
+ @media(max-width:1920px) {
+   html {
+     font-size: 55%;
+   }media
+ }
+ 
+ @media(max-width:760px) {
+   html {
+     font-size: 45%;
+   }
+   
+       /*---------mobile--------BODY-SECTION-----------------------*/
+  .BODY-HEADER-DIV-1{
+   transform: translate(1rem ,.8rem);
+  }
+   
+   .BODY-HEADER-DIV-1 li{
+  font-size: 2rem;
+  }
+  
+  .BODY-HEADER-DIV-2{
+    transform: translatey(.85rem);
+  }
+  
+   .BODY-HEADER-DIV-2 li{
+   font-size: 1rem;
+     padding:0rem 1rem;
+     height:1.8rem;
+ }
+ 
+ /*---------mobile--------BODY-SECTION-DIV-1------------------------------------------*/
+ .body-section-div-1 {
+   display: flex;
+   width: 100vw;
+   height: 10rem;
+   font-size:1.5rem ;
+   transform: translateY(1.5rem);
+ }
+ 
+ .body-section-div-1 img {
+   border-radius: 1.5rem;
+   box-shadow: 1rem 1rem 1.6rem;
+ }
+ 
+ .body-section-div-1 P {
+   color: #FAF6F6;
+   transform: translatey(1.5rem);
+   height: 5rem;
+   width: 15.3rem;
+   text-align: center;
+   font-family: 'Viaoda Libre', cursive;
+ }
+ 
+  /*---------mobile--------BODY-SECTION-DIV-2------------------------------------------*/
+ 
+ .body-section-div-2{
+  transform: translate(8rem, 7rem);
+  display: block;
+  height: 41rem;
+  width: 33rem;
+  font-size: 1.5rem;
+  box-shadow: 1rem 1rem 2.5rem;
+}
+
+.body-section-div-2 img{
+  display: flex;
+  margin: auto;
+  padding-top: 2rem;
+  width:28.8rem ;
+  height:36rem;
+}
+
+
+.body-section-div-2 P{
+  color: white;
+  text-align: center;
+  background: blue;
+  transform: translateY(1.7rem);
+  font-family: fancy;
+}
+
+ /*---------mobile--------BODY-SECTION-DIV-3------------------------------------------*/
+.body-section-div-3 {
+  box-shadow: 1rem 2.5rem 1rem;
+  background: linear-gradient(to right, red, blue);
+  color: #616163;
+  width: 44rem;
+  height: 14rem;
+  transform: translate(2.8rem, 12rem);
+  font-size: 1.6rem;
+  font-family: 'Viaoda Libre', cursive;
+  box-shadow: 1rem 1rem 1rem #4c4c4c;
+  text-align: justify;
+}
+
+.body-section-div-3 P {
+  transform: translateY(1.4rem);
+  background: white;
+}
+
+/*-------------ABOUT-SECTION----------------------------------------*/
+
+.about-section {
+  transform: translatey(25rem);
+  display: block;
+}
+
+/*-------------ABOUT-SECTION-DIV-1--------------------------------------*/
+
+.about-section-title {
+  display: flex;
+  width: 33rem;
+  height: 2.5rem;
+  transform: translate(8rem, -1rem);
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section-title p {
+  color: #625858;
+  font-size: 3rem;
+  font-family: cursive;
+  padding: 0rem 1.5rem;
+  text-shadow: .3rem .25rem .35rem #9B9292;
+}
+
+/*-------------ABOUT-SECTION-DIV-2----------------------------------------*/
+.about-section-image {
+  transform: translate(8rem, 2.5rem);
+  display: block;
+  height: 34rem;
+  width: 33rem;
+  font-size: 1.5rem;
+  box-shadow: 1rem 1rem 2.5rem;
+}
+
+.about-section-image img {
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  margin: auto;
+  padding-top: 1.5rem;
+}
+
+.about-section-image p {
+  color: white;
+  text-align: center;
+  background: blue;
+  transform: translateY(1.8rem);
+  font-family: fancy;
+}
+
+/*-------------ABOUT-SECTION-DIV-3---------------------------------------*/
+
+.about-section-para {
+  box-shadow: 1rem 2.5rem 1rem;
+  background: linear-gradient(to right, red, blue);
+  color: #616163;
+  width: 44rem;
+  height: 7.5rem;
+  transform: translate(2.75rem, 9.5rem);
+  font-size:1.6rem;
+  font-family: 'Viaoda Libre', cursive;
+  box-shadow: 1rem 1rem 1rem #4c4c4c;
+  text-align: justify;
+  margin-bottom: 40rem;
+}
+
+.about-section-para p {
+  transform: translateY(1.25rem);
+  background: white;
+}
+
+.about-section-para p a {
+  text-decoration: none;
+  color: #616163;
+  padding: 0rem 1rem;
+  transition: all .5s;
+}
+
+.about-section-para p a:hover {
+  box-shadow: .5rem .5rem .5rem;
+}
+   
+ }
+
+
+/*-------------i-pad & tablets----------------------------------------------*/
+
+@media (max-width:1366px){
+  
+  
+  html{
+    font-style: 65%;
+  }
+  
+   /*---------pad--------BODY-SECTION-----------------------*/
+  
+ 
+ /*---------mobile--------BODY-SECTION-DIV-1------------------------------------------*/
+ 
+ 
+  /*---------mobile--------BODY-SECTION-DIV-2------------------------------------------*/
+ 
+.body-section-div-2{
+       transform: translatey( 12rem);
+       width:100vw;
+       height:44rem;
+  }
+
+.body-section-div-2 img{
+  display: flex;
+  margin: auto;
+  padding-top: 2rem;
+  width:28.8rem ;
+  height:36rem;
+}
+
+
+.body-section-div-2 P{
+  color: white;
+  text-align: center;
+  background: blue;
+  transform: translateY(1.5rem);
+  font-family: fancy;
+}
+
+ /*---------mobile--------BODY-SECTION-DIV-3------------------------------------------*/
+.body-section-div-3 {
+  background: linear-gradient(to right, red, blue);
+  color: #616163;
+  width: 80vw;
+  height: 14.5rem;
+  transform: translatey( 18rem);
+  font-size: 2rem;
+  font-family: 'Viaoda Libre', cursive;
+  box-shadow: 1rem 1rem 1rem #4c4c4c;
+  text-align: justify;
+  margin: auto;
+}
+
+.body-section-div-3 P {
+  display: flex;
+  align-items: center;
+  background: white;
+}
+
+/*-------------ABOUT-SECTION----------------------------------------*/
+
+.about-section {
+  transform: translatey(40rem);
+  display: block;
+  width: 100vw;
+}
+
+/*-------------ABOUT-SECTION-DIV-1--------------------------------------*/
+
+.about-section-title {
+  display: flex;
+  width: 100vw;
+  height: 3rem;
+  transform: translatey( -1rem);
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section-title p {
+  color: #625858;
+  font-size: 3rem;
+  font-family: cursive;
+  padding: 0rem 1.5rem;
+  text-shadow: .3rem .25rem .35rem #9B9292;
+}
+
+/*-------------ABOUT-SECTION-DIV-2----------------------------------------*/
+.about-section-image {
+  transform: translatey(2.5rem);
+  display: block;
+  height: 34rem;
+  width: 100vw;
+  font-size: 2rem;
+}
+
+.about-section-image img {
+  width: 30rem;
+  height: 30rem;
+  margin: auto;
+  padding-top: 1.5rem;
+ 
+}
+
+.about-section-image p {
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content:center;
+  background: blue;
+  transform: translateY(1.5rem);
+  font-family: fancy;
+}
+
+/*-------------ABOUT-SECTION-DIV-3---------------------------------------*/
+
+.about-section-para {
+  background: linear-gradient(to right, red, blue);
+  color: #616163;
+  width: 80vw;
+  height: 8rem;
+  transform: translatey(9.5rem);
+  font-size:2rem;
+  font-family: 'Viaoda Libre', cursive;
+  box-shadow: 1rem 1rem 1rem #4c4c4c;
+  text-align: justify;
+  margin: auto;
+  margin-bottom: 40rem;
+}
+
+.about-section-para p {
+  transform: translateY(1.25rem);
+  background: white;
+}
+
+.about-section-para p a {
+  text-decoration: none;
+  color: #616163;
+  padding: 0rem 1rem;
+  transition: all .5s;
+}
+
+.about-section-para p a:hover {
+  box-shadow: .5rem .5rem .5rem;
+}
+ 
+ }
+
+
+@media (max-width:414px){
+       
+        .about-section{
+         transform: translatey(38rem);
+          }
+  
+       .about-section-para{
+         font-size:1.5rem;
+         margin-bottom:50rem;
+         }
+      
+          .body-section-div-3{
+            width:80vw;
+            margin:auto;
+            transform: translatey(27rem);
+            font-size: 1.5rem;
+            display:flex;
+            justify-content:center;
+            }
+      
+   }
+  
+  
+</textarea>
+<!--|||||||||||||||||||||||||||||||||||| ||||||-T-E-X-T-A-R-E-A-|||||||||-E-N-D-3-->
+        <div class="hashtags">
+          <a href="https://github.com/skilloo-coder" target="_ayush">#github-Profile</a>
+          <a href="https://github.com/skilloo-coder/Ayush-Gupta_project-1" target="_ayush">#source-code</a>
+          <a href="" id="co-btn">copy</a>
+        </div>
+       </div>
+<!---##############################################################################--->
+          <!----image4------->
+      <div class="images-detail">
+        <div class="web-image">
+        <a href="https://skilloo-coder.github.io/Rashid-Ali-Ansari/" target="_ayush">
+        <img src="Rashid.jpg" alt="Rashid-Ali-Ansari" class="section-div-a4">
+        </a>
+        </div>
+        <div class="about-web">
+          <h2><b>Friend Website</b></h2>
+          <p>This website is create on the behalf of friendship . If you want this source-code. <span id="co-btn">copy</span></p>
+        </div>
+<!--|||||||||||||||||||||||||||||||||||| ||||||-T-E-X-T-A-R-E-A-||||S-T-A-R-T-4--->
+<textarea name="code" id="textarea1">
+<!--------------------HTML------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="main-header">
+    
+    <!-----header-div-1--------->
+    
+    <div class="header-div-1">
+      <li><a name="Home">Rashid</a></li>
+    </div>
+    
+     <!-----header-div-2--------->
+    
+    <div class="header-div-2">
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#Gallary">Gallary</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </div>
+    
+  <div class="header-div-3">
+    <div class="center">
+      <div class="box" id="b1"></div>
+      <div class="box" id="b2"></div>
+      <div class="box" id="b3"></div>
+      <div class="box" id="b4"></div>
+      <div class="box" id="b5"></div>
+      <div class="box" id="b6"></div>
+      <div class="box" id="b7"></div>
+      <div class="box" id="b8"></div>
+      <div class="box" id="b9"></div>
+      <div class="box" id="b10"></div>
+      <div class="box" id="b11"></div>
+      <div class="box" id="b12"></div>
+      <div class="box" id="b13"></div>
+      <div class="box" id="b14"></div>
+      <div class="box" id="b15"></div>
+      <div class="box" id="b16"></div>
+      <div class="box" id="b17"></div>
+      <div class="box" id="b18"></div>
+      
+      
+      <a href="#"><img src="Rash.jpg" alt="Rashid" class="a11"/></a>
+     <a href="#"><img src="Rashid1.jpg" alt="Rashid" class="a12" /></a>
+     <a href="#"><img src="ayush.jpg" alt="spck" class="a13"></a>
+     </div>
+   </div>
+  
+  </header>
+  
+<section class="main-section">
+    <a name="Gallary"></a>
+  <div class="image-div">
+    <img src="Rash.jpg" alt="Rashid">
+    <img src="Rashid1.jpg" alt="Rashid">
+    <img src="Rashid3.jpg" alt="Rashid">
+  </div>
+</section>
+  
+ <footer>
+   <main>
+     <!----div1----------->
+     <a name="About"></a>
+       <div class="f-m-about"><P>About Us</P></div>
+      
+      <!----div2----------->
+      
+      <div class="Friend-image">
+        
+        <div class="Rashid-image">
+          <img src="Rashid1.jpg" alt="Rashid">
+          <p>Name: Rashid Ansari</p>
+        </div>
+        
+        <div class="Ayush-image">
+          <img src="ayush.jpg" alt="ayush">
+          <p>Name: Ayush Gupta</p>
+        </div>
+        
+        
+       </div>
+        
+        
+      </div>
+      <!----div3----------->
+      <a name="Contact"></a>
+      <div class="f-m-links">
+        <P>Social Links</P></div>
+      
+      <!----div4----------->
+      
+    <div class="Friend-links">
+        
+        <div class="Rashid-details">
+          <p>Rashid</p>
+          <p><a href="https://www.facebook.com/aqibansari.aki" target="_ayush">Facebook</a></p>
+          <p><a href="https://instagram.com/i_am_rashid24?utm_medium=copy_link" target="_ayush">Instagram</a></p>
+          </div>
+        <div class="Ayush-details">
+          <p>Website Creator</p>
+          <p><a href="https://www.facebook.com/103074255276182/posts/103078118609129/?substory_index=0" target="_ayush">Facebook</a></p>
+          <p><a href="https://instagram.com/vishalgupta_1729?utm_medium=copy_link" target="_ayush">Instagram</a></p>
+          <p><a href="https://twitter.com/Ayush43173433?s=08">Twitter</a></p>
+          <p><a href="https://github.com/skilloo-coder">GitHub</a></p>
+        </div>
+        
+     </div>
+   </main>
+  </footer>
+  
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
+</textarea>
+
+<textarea name="code" id="textarea2">
+<!---------------------CSS----------------------->
+*{
+  margin: 0; padding: 0; 
+  box-sizing: border-box;
+}
+
+@font-face{
+      font-family:china;
+      src:url(go3v2.ttf);
+      }
+
+html{
+  scroll-behavior: smooth;
+}
+
+.main-header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.2rem 10rem;
+ background-image: url(Friend1.jpg);
+ background-size:cover;
+}
+
+.header-div-1{
+  
+  display:flex;
+  justify-content:left;
+  align-items: center;
+}
+
+.header-div-1 li{
+  list-style: none;
+  width: 20vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-div-1 li a{
+  text-decoration: none;
+  color:#30CD87;
+  font-family: china;
+  -webkit-text-stroke-width: .6px;
+  -webkit-text-stroke-color:black;
+}
+
+.header-div-2{
+  display:flex;
+  align-items: center;
+  width: 50vw;
+}
+
+.header-div-2 li{
+  font-size: 11px;
+  list-style: none;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 15vw;
+}
+
+.header-div-2 li a{
+  text-decoration: none;
+  color:#5DC4CE;
+  font-family:china, sans-serif;
+  -webkit-text-stroke-width: .4px;
+  -webkit-text-stroke-color:black;
+}
+
+.center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        grid-column: 1/-1;
+        top: 50%;
+        left: 50%;
+      }
+      
+  .box{ width: 6rem;
+        height:6rem;
+        background-color: transparent;
+        border: 1px solid white;
+        position:absolute;
+        border-radius: 50%;
+       }
+
+/*--------box-keyframes----------*/
+       
+      #b1 {
+        animation: t1 3s infinite;
+       }
+       
+        @keyframes t1 {
+          50% {
+            transform: rotate(180deg);
+            height: 9rem;
+            width: 4rem;
+             border-radius: 50%;
+          }
+       
+        }
+        
+         #b2 {
+           animation: t2 3s infinite;
+         }
+        
+         @keyframes t2 {
+           50% {
+             transform: rotate(170deg);
+             height: 9rem;
+             width: 4rem;
+              border-radius: 50%;
+           }
+        
+         }
+         
+          #b3 {
+            animation: t3 3s infinite;
+          }
+         
+          @keyframes t3 {
+            50% {
+              transform: rotate(160deg);
+              height: 9rem;
+              width: 4rem;
+               border-radius: 50%;
+            }
+         
+          }
+          
+           #b4 {
+             animation: t4 3s infinite;
+           }
+          
+         @keyframes t4 {
+           50% {
+              transform: rotate(150deg);
+             height: 9rem;
+             width: 4rem;
+              border-radius: 50%;
+             }
+          
+           }
+           
+       #b5 {
+         animation: t5 3s infinite;
+       }
+      
+       @keyframes t5 {
+         50% {
+           transform: rotate(140deg);
+           height: 9rem;
+           width: 4rem;
+            border-radius: 50%;
+         }
+      
+       }
+       
+       #b6 { 
+           animation: t6 3s infinite;
+         }
+         
+         @keyframes t6 {
+           50% {
+             transform: rotate(130deg);
+             height: 9rem;
+             width: 4rem;
+             border-radius: 50%;
+           }
+         
+         }
+         
+    #b7 {
+      animation: t7 3s infinite;
+    }
+    
+    @keyframes t7 {
+      50% {
+        transform: rotate(120deg);
+        height: 9rem;
+        width: 4rem;
+        border-radius: 50%;
+      }
+    
+    }
+    
+  #b8 {
+    animation: t8 3s infinite;
+  }
+  
+  @keyframes t8 {
+    50% {
+      transform: rotate(110deg);
+      height: 9rem;
+      width: 4rem;
+      border-radius: 50%;
+    }
+  
+  }
+  
+#b9 {
+  animation: t9 3s infinite;
+}
+
+@keyframes t9 {
+  50% {
+    transform: rotate(100deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+
+}
+
+#b10 {
+  animation: t10 3s infinite;
+}
+
+@keyframes t10 {
+  50% {
+    transform: rotate(90deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+}
+
+#b11 {
+  animation: t11 3s infinite;
+}
+
+@keyframes t11 {
+  50% {
+    transform: rotate(80deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+}
+
+#b12 {
+  animation: t12 3s infinite;
+}
+
+@keyframes t12 {
+  50% {
+    transform: rotate(70deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+}
+
+#b13 {
+  animation: t13 3s infinite;
+}
+
+@keyframes t13 {
+  50% {
+    transform: rotate(60deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+}
+
+#b14 {
+  animation: t14 3s infinite;
+}
+
+@keyframes t14 {
+  50% {
+    transform: rotate(50deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+}
+
+#b15 {
+  animation: t15 3s infinite;
+}
+
+@keyframes t15 {
+  50% {
+    transform: rotate(40deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+}
+
+#b16 {
+  animation: t16 3s infinite;
+}
+
+@keyframes t16 {
+  50% {
+    transform: rotate(30deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+}
+
+#b17 {
+  animation: t17 3s infinite;
+}
+
+@keyframes t17 {
+  50% {
+    transform: rotate(20deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+}
+
+#b18 {
+  animation: t18 3s infinite;
+}
+
+@keyframes t18 {
+  50% {
+    transform: rotate(10deg);
+    height: 9rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+}
+
+/*-------------div-3----------*/
+
+.header-div-3 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.header-div-3 .center a img {
+  height: 6rem;
+  width: 6rem;
+  position: absolute;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+ a .a12{
+  display:block;
+  animation: a12 3s infinite;
+}
+
+
+@keyframes a12 {
+  50%{
+    transform: translateX(4rem);
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+ a .a11{
+  display:block;
+  animation: a11 3s infinite;
+}
+
+
+@keyframes a11 {
+  50%{
+    transform: translateX(-4rem);
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+ a .a13{
+  display:block;
+  animation: a13 3s infinite;
+}
+
+
+@keyframes a13 {
+  50%{
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+.main-section{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: block;
+  justify-content: center;
+  background-color: #EDF0EF;
+}
+
+.main-section .image-div{
+  display:block;
+  justify-content:center;
+  align-items: center;
+}
+
+.main-section img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:70vw;
+  margin: 1rem auto;
+  height: inherit;
+  border: .5rem solid #fff;
+  padding: 0;
+  box-shadow: .8rem .8rem .5rem #858586;
+}
+
+.main-section img:first-child{
+  margin-top: 0;
+}
+
+.main-section img:last-child{
+  margin-bottom: 0;
+}
+
+/*##########footer#########*/
+
+footer main{
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 3rem 6rem 5rem 12rem;
+ background-image: linear-gradient( 120deg, #68FAF7 50%, #FFFFFF 50%);
+ box-shadow: inset 0px 0px 4px white;
+}
+
+footer .f-m-about{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .f-m-about p{
+  text-shadow: 1px 2px 1px #7E8383;
+  font-size: 1.1rem;
+  font-family: cursive;
+}
+
+footer .Friend-image{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+footer .Friend-image .Rashid-image img ,
+.Ayush-image img{
+  border: 2px solid white;
+  box-shadow: .2rem .2rem .13rem #8D8E8E;
+}
+
+footer .Friend-image p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer .f-m-links{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-2rem);
+}
+
+footer .f-m-links p{
+  text-shadow: 1px 2px 1px #7E8383;
+  font-size: 1.1rem;
+  font-family: cursive;
+}
+
+
+footer img{
+  width: 20vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+footer main p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
+
+footer main p a{
+  box-shadow: .25rem .35rem .1rem #AEAEAE;
+  border: .1rem solid #E12255A8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color:#4A4848 ;
+  background-image: linear-gradient( 120deg, #E12255A8 50%, #FFFFFF 50%);
+  font-size: .9rem;
+  font-family:china;
+  cursor: pointer;
+  margin: .4rem;
+  width: 77px;
+}
+*/
+
+footer .Friend-links{
+  width: 100vw;
+  display:flex;
+  justify-content: space-evenly;
+}
+
+footer .Friend-links p{
+  font-family: 'cursive', Courier, monospace;
+}
+
+footer .Friend-links p a{
+  box-shadow: .25rem .35rem .1rem #AEAEAE;
+  border: .1rem solid #02A396;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  color:#656363 ;
+  background-image: linear-gradient( 120deg, #68FAF7 50%, #FFFFFF 50%);
+  font-size: .9rem;
+  font-family:china;
+  cursor: pointer;
+  margin: .4rem;
+  width: 77px;
+}
+</textarea>
+<!--|||||||||||||||||||||||||||||||||||| ||||||-T-E-X-T-A-R-E-A-|||||||||-E-N-D-4-->
+        
+    <div class="hashtags">
+      <a href="https://github.com/skilloo-coder" target="_ayush">#github-Profile</a>
+      <a href="https://github.com/skilloo-coder/Rashid-Ali-Ansari" target="_ayush">#source-code</a>
+      <a href="" id="co-btn">copy</a>
+    </div>
+       </div>
+    </div>
+
+  </section>
+  
+  
+ <!--- __________________________________________________________________________________________&&&&&&&&&&&&&&&_________________________________________________________________________________________________&&&&&&&&&&&&&&&&___________________________________________------->
+ 
+  <a name="contact"></a>
+  <!---footer------------>
+<footer class="main-footer">
+<!-------div-footerBackground--------->
+  <div class="footBg">
+  <!---div1--------->
+    <div class="main-footer-1p">
+     <p class="links-foot">links</p>
+    </div>
+  <!--end-div1--->
+    
+    <!------div2--------->
+<div class="footer-div-2">
+    <!--------div2.1---------------->
+    <div class="footer-div-2-1">
+<!--------div2.1-social-links--------->
+       <div class="social foot-common">
+        <p>social</p>
+        <li> <a href="https://www.facebook.com/103074255276182/posts/103078118609129/?substory_index=0" target="_ayush">Facebook</a>
+        </li>
+        <li> <a href="https://www.instagram.com/invites/contact/?i=c7q96sz5zpk9&utm_content=a7qyb01" target="_ayush">Instagram</a></li>
+         <li> <a href="mailto:vishalgupta6244@gmail.com?subject=Hi Ayush&body=I am your" target="_ayush">Mail</a></li>
+         </div>
+<!--------div2.1-other-links---------->
+        <div class="other foot-common">
+         <p>other</p>
+         <li> <a href="https://github.com/skilloo-coder" target="_ayush">Github</a></li>
+         <li> <a href="https://www.w3schools.com/html/default.asp" target="_ayush" class="foot-html">HTML TUTORIAL</a></li>
+         <li><a href="https://youtu.be/mLOhGKYS-Js" target="_ayush">Youtube</a></li>
+       </div><!--end-div2.1-other-->
+     </div><!--end-div2.1--->
+   </div><!--end-div2--->
+ </div><!--end-footerBackground--->
+</footer>
+<div class='skilloo-coder_footer_copyright'>
+  <p class="para_copyright">
+  &#169;
+  <a href='https://skilloo-coder.github.io/Portfolio/'><strong>Skilloo-Coder</strong></a> 2021
+  </p>
+</div>
+  
+ <!---__________________________________________________________________________________________&&&&&&&&&&&&&&&_________________________________________________________________________________________________&&&&&&&&&&&&&&&&__________________________________________-->
+
+  <script src="Port.js"></script>
+</body>
+
+</html>
